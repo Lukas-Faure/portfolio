@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Lukas Faure</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <header id="particles-js">
+        <div class="circle-header">
+            <div class="word word-rotate-0">Java</div>
+            <div class="word word-rotate-45">Dart</div>
+            <div class="word word-rotate-n45">Python</div>
+            <div class="word word-rotate-135">HTML</div>
+            <div class="word word-rotate-180">CSS</div>
+            <div class="word word-rotate-225">JavaScript</div>
+        </div>
+        <div class="central-text">Faure Lukas</div>
+        <canvas id="canvas"></canvas>
+        <script src="animation.js"></script>
+        <div id="light"></div>
+    </header>
+    <button class="burger-btn">☰</button>
+    <nav class="navbar" id="navbar">
+        <button class="close-btn">X</button>
+        <img src="assets/outils/rechercher.jpg" alt="Logo" class="nav-logo">
+        <ul class="nav-items">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#aPropos">A propos</a></li>
+            <li><a href="pages/tout_projets.html">Projets</a></li>
+            <li><a href="pages/cv.html">CV</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <script src="script.js"></script>
+
+    <div class="parallax-container" id="aPropos">
+        <div class="parallax-image">
+            <div class="carte">
+                <div class="header">
+                    <img src="../assets/logo/logo.png" alt="Logo" class="logo">
+                    <div class="contenu">
+                        <h2>Faure Lukas</h2>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>Etudiant en BUT Informatique à l'IUT2 de Grenoble.</p>
+                    <p>Passionné par la programmation et l'Informatique en général.</p>
+                    <p>A coté de mes études j'essais de consolider mes compétences dans ce domaine.</p>
+                    <p>Je connais quand même des mots étranges pour un informaticien tel que "Extérieur" ou encore "Soleil". C'est pourquoi, il m'arrive régulièrement de faire du vélo et adore être en compagnie de mes amis.</p>
+                    <p>Pour ne pas être redondant et vous endormir, je laisse mon CV parler de mes diplômes et compétences :</p>
+                    <a class="styled-link" href="pages/cv.html">Mon Curriculum Vitae</a>
+                </div>
+            </div>
+            <a href="pages/contact.html">
+                <button class="button-general-bleu">
+                    Contactez moi
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div class="barre-horizontale">
+        <p>Commit GitHub : 331</p>
+        <p>Fiabilité des délais : 99%</p>
+        <p>Projets non aboutis : 5</p>
+    </div>
+    <div class="projet_title">
+        <h1>PROJETS</h1>
+    </div>
+    
+    <div class="all_projects">
+        <div class="wrapper">
+            <div class="card">
+                <div class="card-face card-front">
+                    <div class="imageProjectBackground" style="background-image: url('assets/home/agri-project.jpg');">
+                        <div class="imageProject" style="background-image: url('assets/Projet/logo_proxifarm.png');"></div>
+                    </div>
+                    <div class="project_bottom">
+                        <div class="project_infos">
+                            <div class="main_infos">
+                                <h1 class="name">ProxiFarm</h1>
+                                <p class="date grey">Mars - Mai 2024</p>
+                            </div>
+                            <p class="description">Une application mobile réalisé avec un ami qui a pour but de venir en aide aux petites exploitations agricoles. Ces dernières peuvent gagner plus de visibilité. Cela offre un avantage aux utilisateurs qui peuvent connaître facilement les exploitants et les produits vendus a proximité de chez eux.</p>
+                        </div>
+                            <button class="button-retourner-bleu">
+                                Retourner
+                            </button>
+                    </div>
+                </div>
+                <div class="card-face card-back">
+                    <div class="back-content">
+                        <h1>ProxiFarm</h1>
+                        <p class="titre-column">Les compétences développées</p>
+                        <div class="skills">
+                            <ul class="skill-column">
+                                <li>Identifier les besoins utilisateurs</li>
+                                <li>Gestion de projet</li>
+                                <li>Optimisation de code</li>
+                                <li>Réalisation d'une application</li>
+                                <li>Gestion de base de donnée</li>
+                            </ul>
+                            <ul class="skill-column">
+                                <li>Esprit d'équipe</li>
+                                <li>Sens de l'oganisation</li>
+                                <li>AutonomieEsprit</li>
+                                <li>Persévérance</li>
+                                <li>Rigeur</li>
+                            </ul>
+                        </div>
+                        <p class="description_back">Une application mobile que j'ai réalisée avec un ami. Cette application mobile à pour but de venir en aide aux petites exploitations agricoles afin de leurs donner plus de visibilité. Cela offre un avantage aux utilisateurs qui peuvent connaître facilement les exploitants et les produits vendus a proximité de chez eux. J'ai fais l'entiereté du back-end de l'application et j'ai aidé mon ami sur le front-end.</p>
+                        <div class="moreInfo">
+                            <a href="pages/tout_projets.html#ProxiFarm">
+                                <button class="button-general-bleu">
+                                    En savoir plus
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+        <div class="wrapper">
+            <div class="card">
+                <div class="card-face card-front">
+                    <div class="imageProjectBackground" style="background-image: url('assets/home/plugin_minecraft.jpg');">
+                        <div class="imageProject" style="background-image: url('assets/Projet/logo_minecraft.png');"></div>
+                    </div>
+                    <div class="project_bottom">
+                        <div class="project_infos">
+                            <div class="main_infos">
+                                <h1 class="name">CivilyNation</h1>
+                                <p class="date grey">Décembre 2023</p>
+                            </div>
+                            <p class="description">Plugin minecraft créé au cours de mon tout premier semestre en BUT Informatique
+                                Ce plugin avait pour but d'offrir une expérience en plus du jeu de base et entre amis.</p>
+                        </div>
+                            <button class="button-retourner-bleu">
+                                Retourner
+                            </button>
+                    </div>
+                </div>
+                <div class="card-face card-back">
+                    <div class="back-content">
+                        <h1>CivilyNation</h1>
+                        <p class="titre-column">Les compétences développées</p>
+                        <div class="skills">
+                            <ul class="skill-column">
+                                <li>Conception logiciel</li>
+                                <li>Conception UI / UX</li>
+                                <li>Optimisation de code</li>
+                                <li>Compétence Java</li>
+                                <li>Gestion d’événements</li>
+                            </ul>
+                            <ul class="skill-column">
+                                <li>Autonomie</li>
+                                <li>Curiosité</li>
+                                <li>Rigeur</li>
+                                <li>Sens de l'oganisation</li>
+                                <li>Persévérance</li>
+                            </ul>
+                        </div>
+                        <p class="description_back">Plugin minecraft créé au cours de mon tout premier semestre en BUT Informatique
+                            Ce plugin avait pour but d'offrir une expérience en plus du jeu de base et entre amis.
+                            Le principe était simple, crée son pays, ses villes tout en gérant ses relations internationales. 
+                            En oubliant pas la gestion de l'économie de son pays.
+                            Le but principal était de se démarquer des autres plugin en offrant directement un menu intégré pour éviter de retenir des commandes</p>
+                        <div class="moreInfo">
+                            <a href="pages/tout_projets.html#CivilyNation">
+                                <button class="button-general-bleu">
+                                    En savoir plus
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+        <div class="wrapper">
+            <div class="card">
+                <div class="card-face card-front">
+                    <div class="imageProjectBackground" style="background-image: url('assets/home/appli_rally_s2.jpg');">
+                        <div class="imageProject" style="background-image: url('assets/Projet/logo_mega_sae_s2.jpg');"></div>
+                    </div>
+                    <div class="project_bottom">
+                        <div class="project_infos">
+                            <div class="main_infos">
+                                <h1 class="name">Projet Ecole - MyRallye</h1>
+                                <p class="date grey">Mai - Juin 2024</p>
+                            </div>
+                            <p class="description">Lors de mon second Semestre 2 en étude d'informatique. J'ai du réaliser avec en équipe de 6 une application avec interface graphique pour aider une personne dans la prise de décision dans l'organisation de rallye.</p>
+                        </div>
+                            <button class="button-retourner-bleu">
+                                Retourner
+                            </button>
+                    </div>
+                </div>
+                <div class="card-face card-back">
+                    <div class="back-content">
+                        <h1>Projet Ecole Application Mobile</h1>
+                        <p class="titre-column">Les compétences développées</p>
+                        <div class="skills">
+                            <ul class="skill-column">
+                                <li>compétence1</li>
+                                <li>compétence1</li>
+                                <li>compétence1</li>
+                                <li>compétence1</li>
+                                <li>compétence1</li>
+                            </ul>
+                            <ul class="skill-column">
+                                <li>Esprit d'équipe</li>
+                                <li>Sens de l'oganisation</li>
+                                <li>Rigeur</li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                        <p class="description_back">PAS ENCORE REALISER A REDIGER APRES AVOIR EFFECTUER LA SAE</p>
+                        <div class="moreInfo">
+                            <a href="pages/tout_projets.html#megaSAE_S2">
+                                <button class="button-general-bleu">
+                                    En savoir plus
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+        <div class="wrapper">
+            <div class="card">
+                <div class="card-face card-front">
+                    <div class="imageProjectBackground" style="background-image: url('assets/home/java_projet.jpg');">
+                        <div class="imageProject" style="background-image: url('assets/Projet/Java-Logo.jpg');"></div>
+                    </div>
+                    <div class="project_bottom">
+                        <div class="project_infos">
+                            <div class="main_infos">
+                                <h1 class="name">Projet Ecole programmation Java</h1>
+                                <p class="date grey">Janvier 2024</p>
+                            </div>
+                            <p class="description">Lors de mon premier semestre en étude d'informatique. J'ai du réaliser avec un binome un programme codé en Java. Ce dernier devait trouver la catégorie d'une dépèche donnée.</p>
+                        </div>
+                            <button class="button-retourner-bleu">
+                                Retourner
+                            </button>
+                    </div>
+                </div>
+                <div class="card-face card-back">
+                    <div class="back-content">
+                        <h1>Projet Ecole Programmation Java</h1>
+                        <p class="titre-column">Les compétences développées</p>
+                        <div class="skills">
+                            <ul class="skill-column">
+                                <li>Compétence Java</li>
+                                <li>Optimisation de code</li>
+                                <li>Coder à plusieurs</li>
+                                <li>Coder proprement</li>
+                                <li>Entrainement d'un programme</li>
+                            </ul>
+                            <ul class="skill-column">
+                                <li>Autonomie</li>
+                                <li>Curiosité</li>
+                                <li>Rigeur</li>
+                                <li>Esprit d'équipe</li>
+                                <li>Persévérance</li>
+                            </ul>
+                        </div>
+                        <p class="description_back">Dans le cadre de mon premier semestre en BUT Informatique, avec un binome, nous avons du réaliser une classificateur de dépèches. Nous avons du coder un programme en Java qui trouve le thème principal d'une dépèche où nous lui fournissons dans un premier temps le lexique des catégories. Dans un second temps notre programme a appris par lui même et a du générer lui même son lexique</p>
+                        <div class="moreInfo">
+                            <a href="pages/tout_projets.html#projetJava_S1">
+                                <button class="button-general-bleu">
+                                    En savoir plus
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="pages/tout_projets.html">
+            <button class="button-general-bleu">
+                Tout mes projets
+            </button>
+        </a>
+    </div>
+
+    <footer>
+        <nav class="bottomBar">
+            <ul>
+                <li><a href="#">Faure Lukas</a></li>
+                <li><a href="mailto:lfaure1703@gmail.com">lfaure1703@gmail.com</a></li>
+                <li><a href="pages/contact.html">Contactez moi</a></li>
+                <li><a href="pages/cv.html">CV</a></li>
+            </ul>
+        </nav>
+    </footer>
+    
+</body>
+</html>
