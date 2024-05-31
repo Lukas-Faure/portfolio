@@ -553,7 +553,8 @@ button-contact:hover {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    margin: 20px;
+    margin: 50px;
+    margin-bottom: 15vh;
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 10px;
