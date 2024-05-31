@@ -588,13 +588,13 @@ button-contact:hover {
 }
 
 .lien_proxifarm:hover {
-    background-color: #45a049; /* Changement de couleur de fond au survol */
-    transform: translateY(-2px); /* Lien légèrement soulevé au survol */
+    background-color: #45a049;
+    transform: translateY(-2px); 
 }
 
 .lien_proxifarm:active {
-    background-color: #3e8e41; /* Changement de couleur de fond lors du clic */
-    transform: translateY(1px); /* Lien légèrement enfoncé lors du clic */
+    background-color: #3e8e41; 
+    transform: translateY(1px); 
 }
 
 
