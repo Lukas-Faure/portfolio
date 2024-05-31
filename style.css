@@ -572,7 +572,31 @@ button-contact:hover {
 .image_projet {
     height: 250px;
     width: 250px;
+    border-radius: 10px;
 }
+
+.lien_proxifarm {
+    color: #ffffff;
+    background-color: #114b13;
+    padding: 10px 20px; 
+    text-decoration: none;
+    border-radius: 5px; 
+    font-family: Arial, sans-serif; 
+    font-size: 16px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.lien_proxifarm:hover {
+    background-color: #45a049; /* Changement de couleur de fond au survol */
+    transform: translateY(-2px); /* Lien légèrement soulevé au survol */
+}
+
+.lien_proxifarm:active {
+    background-color: #3e8e41; /* Changement de couleur de fond lors du clic */
+    transform: translateY(1px); /* Lien légèrement enfoncé lors du clic */
+}
+
 
 
 
