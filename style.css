@@ -578,24 +578,29 @@ button-contact:hover {
 .lien_proxifarm {
     color: #ffffff;
     background-color: #114b13;
-    padding: 10px 20px; 
+    padding: 12px 24px; 
     text-decoration: none;
-    border-radius: 5px; 
+    border-radius: 8px; 
     font-family: Arial, sans-serif; 
-    font-size: 16px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    transition: background-color 0.3s, transform 0.3s;
+    font-size: 18px; 
+    font-weight: bold;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    display: inline-block;
 }
 
 .lien_proxifarm:hover {
     background-color: #45a049;
-    transform: translateY(-2px); 
+    transform: translateY(-4px); 
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
 }
 
 .lien_proxifarm:active {
     background-color: #3e8e41; 
-    transform: translateY(1px); 
+    transform: translateY(-1px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
 }
+
 
 
 
