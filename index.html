@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lukas Faure - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="logo">
+                    <a href="index.html">Lukas Faure</a>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Acceuil</a></li>
+                    <li><a href="pages/skills.html">Compétences</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="pages/cv.html">CV</a></li>
+                </ul>
+                <!--<div class="theme-switcher">
+                    <span>☀️</span>
+                    <input type="checkbox" id="theme-toggle">
+                    <label for="theme-toggle" class="theme-label"></label>
+                    <span>🌙</span>
+                </div>
+                <script src="script.js"></script>-->
+                <a href="pages/contact.html" class="btn-hire">Me Contacter</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1><span class="highlight">Recherche de Stage - Developpeur</a></span><br>Lukas Faure</h1>
+        <p><br>Etudiant deuxième année de <span class="highlight"><a href="https://iut2.univ-grenoble-alpes.fr/l-iut2/qui-sommes-nous-/les-departements-de-l-iut2/informatique-info--149104.kjsp" style="color: inherit; text-decoration: none;">BUT Informatique</a></span> <br>Au sein de <span class="highlight"><a href="https://iut2.univ-grenoble-alpes.fr/" style="color: inherit; text-decoration: none;">l'IUT2</a></span> de <span class="highlight"><a href="https://www.grenoble.fr/" style="color: inherit; text-decoration: none;">Grenoble (38)</a></span><br></p>
+        <div class="buttons">
+            <a href="pages/contact.html" class="btn-primary">Me Contacter</a>
+            <a href="pages/cv.html" class="btn-secondary">Mon CV</a>
+        </div>
+    </section>
+    
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="services-grid">
+            <div class="content-skills">
+                <h2>Mes <span class="highlight">Compétences</span></h2>
+                <p>
+                    Passionné par l'informatique, j'ai toujours cherché à innover et à résoudre des problèmes concrets à travers mes projets. Pour moi, coder ne se résume pas seulement à écrire du code, mais à collaborer et à trouver des solutions efficaces.
+                </p>
+                <br>
+                <p>
+                    Curieux et motivé, je suis constamment à la recherche de nouvelles technologies pour enrichir mes compétences. Chaque projet est une occasion d'apprendre et d'évoluer dans ce domaine en constante évolution.
+                </p>
+                
+            </div>
+            <div class="cards-wrapper">
+                <!-- Les cartes apparaîtront sur la droite -->
+                <div class="card">
+                    <div class="icon">
+                        <img src="assets/projects/logo_flutter.png" alt="Icon Flutter">
+                    </div>
+                    <h2>Flutter</h2>
+                    <p>Je maîtrise Flutter, un framework de développement d'applications mobiles cross-platform, alliant performance et expérience utilisateur, utilisé pour mon projet ProxiFarm.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <img src="assets/projects/logo_cpp.png" alt="Icon C++">
+                    </div>
+                    <h2>C++ / C</h2>
+                    <p>Pendant mes études, j'ai appris à maîtriser le C et le C++ pour développer des applications performantes, en mettant l'accent sur l'optimisation et la gestion des ressources.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <img src="assets/projects/logo_postgreSQL.png" alt="Icon PostgreSQL">
+                    </div>
+                    <h2>PostgreSQL</h2>
+                    <p>Pendant mes études et projets universitaires, j'ai développer une expérience dans l'utilisation de PostgreSQL pour gérer des bases de données relationnelles.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <img src="assets/projects/logo_html.png" alt="Icon HTML">
+                        <img src="assets/projects/logo_css.png" alt="Icon CSS">
+                    </div>
+                    <h2>HTML / CSS</h2>
+                    <p>Je maîtrise HTML et CSS pour créer des interfaces web responsives et esthétiques.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <img src="assets/projects/logo_php.png" alt="Icon PHP">
+                        <img src="assets/projects/logo_js.png" alt="Icon JavaScript">
+                    </div>
+                    <h2>JavaScript / PHP</h2>
+                    <p>Je maîtrise JavaScript et PHP pour développer des applications web dynamiques, en intégrant des fonctionnalités interactives et des bases de données.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <img src="assets/projects/logo_java.png" alt="Icon Java">
+                    </div>
+                    <h2>Java</h2>
+                    <p>Je maîtrise Java pour créer des applications, en suivant les meilleures pratiques de développement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <!-- Stats Section -->
+    <section id="stats">
+        <div class="stats-grid">
+            <div><span class="stat-number"><span class="highlight">1100+</span></span><br>Commit GitHub</div>
+            <div><span class="stat-number"><span class="highlight">8</span></span><br>Projets terminés</div>
+            <div><span class="stat-number"><span class="highlight">9</span></span><br>Langages maitrisés</div>
+        </div>
+    </section>
+    
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Quelques <span class="highlight">Projets</span></h2>
+        <div class="projects-grid">
+            <div class="project-item">
+                <div class="project-cover">
+                    <img src="assets/projects/logo_bc.png" alt="Logo ProxiFarm">
+                    <div class="project-info">
+                        <h3>ProxiFarm</h3>
+                        <p>Mars 2024 - Août 2024 <br> Application mobile (IOS & Android)</p>
+                        <div class="project-more-info">
+                            <p>ProxiFarm est une application mobile conçue pour aider les agriculteurs à vendre leurs produits localement.</p>
+                            <a href="pages/projects.html#proxifarm-app" class="btn-view-more">Voir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-cover">
+                    <img src="assets/projects/logo_ludi-map.png" alt="Logo Ludi-Map">
+                    <div class="project-info">
+                        <h3>Ludi-Map</h3>
+                        <p>Octobre 2024 - Janvier 2025 <br> Application client-serveur avec base de données</p>
+                        <div class="project-more-info">
+                            <p>Ludi-Map est une application web de jeux interactifs visant à valoriser le patrimoine de la région Auvergne-Rhône-Alpes à travers deux mini-jeux ludiques et amusants.</p>
+                            <a href="pages/projects.html#sae-s3" class="btn-view-more">Voir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-cover">
+                    <img src="assets/projects/logo_my_rally.png" alt="Logo MyRally">
+                    <div class="project-info">
+                        <h3>MyRally</h3>
+                        <p>Mai 2024 - Juin 2024 <br> Application Lourde (Java)</p>
+                        <div class="project-more-info">
+                            <p>MyRally est une application lourde qui permet de venir en aide à un organisateur de Rallye automobile dans l'organisation de ce dernier.</p>
+                            <a href="pages/projects.html#myrally" class="btn-view-more">Voir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-cover">
+                    <img src="assets/projects/logo_minecraft.png" alt="Logo Minecraft">
+                    <div class="project-info">
+                        <h3>CivilyNation</h3>
+                        <p>Décembre 2023<br> Plugin Minecraft (Java)</p>
+                        <div class="project-more-info">
+                            <p>CyviliNation est un petit plugin Minecraft qui permet de simuler son pays / son organisation / son économie et d'intéragir avec d'autres pays (Joueurs).</p>
+                            <a href="pages/projects.html#civilynation" class="btn-view-more">Voir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="pages/projects.html" class="btn-all-project">Tout mes projets</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Lukas Faure</p>
+    </footer>
+</body>
+</html>
+

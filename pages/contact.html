@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Lukas Faure Portfolio</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="../index.html">Lukas Faure</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="skills.html">Compétences</a></li>
+                <li><a href="../index.html#projects">Projets</a></li>
+                <li><a href="cv.html">CV</a></li>
+            </ul>
+            <a href="contact.html" class="btn-hire">Me Contacter</a>
+        </div>
+    </nav>
+
+    <!-- Section Contact -->
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Contactez-moi</h2>
+            <p>N'hésitez pas à me contacter si vous souhaitez en savoir davantage ou si vous avez une opportunité à proposer ! Remplissez le formulaire ci-dessous.</p>
+
+            <form class="contact-form" action="../php/contact.php" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" id="name" placeholder="Votre Nom" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" id="email" placeholder="Votre Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" id="message" placeholder="Votre Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-send">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Lukas Faure. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Fonction pour afficher une pop-up en fonction du paramètre "sent" dans l'URL
+        function displayPopupMessage() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const sentStatus = urlParams.get('sent');
+
+            if (sentStatus === 'true') {
+                alert("Votre message a été envoyé avec succès.");
+                // Supprimer le paramètre "sent" de l'URL après affichage du message
+                window.history.replaceState(null, null, window.location.pathname);
+            } else if (sentStatus === 'false') {
+                alert("Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer.");
+                // Supprimer le paramètre "sent" de l'URL après affichage du message
+                window.history.replaceState(null, null, window.location.pathname);
+            }
+        }
+
+        // Appel de la fonction au chargement de la page
+        window.onload = displayPopupMessage;
+    </script>
+</body>
+</html>

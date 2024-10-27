@@ -1,0 +1,603 @@
+
+/* Global styles */
+:root{
+    --blue: #2fb8da;
+    --blue-btn-hover: #0b8bb3;
+    --blue-btn: #096b8a;
+    --blue-border-service: #28495a;
+    --blue-border-project: rgba(11, 139, 179, 0.5);
+    --blue-dark-bc-project: #10131b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #0b0c10; /* Darker background like the image */
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: transparent;
+    position: fixed; /* Fixe la navbar en haut de la page */
+    top: 0; /* Position en haut de l'écran */
+    width: 100%; /* S'assure que la navbar prend toute la largeur de la page */
+    z-index: 1000; /* S'assure que la navbar reste au-dessus des autres éléments */
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    padding: 10px 30px;
+    background-color: #000;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(47, 184, 218, 0.7); /* Effet de glow */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.logo > a {
+    color: white; text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    color: #c8c7c7;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px;
+    transition: color 0.3s, transform 0.3s; /* Transition on color and zoom */
+}
+
+.nav-links li a:hover {
+    color: var(--blue); /* Change the text color to var(--blue) */
+}
+
+.nav-links .active {
+    color: #fff;
+    font-weight: bold;
+    filter: brightness(1.5); /* Make the active link brighter */
+}
+
+.btn-hire {
+    background-color: var(--blue-btn); /* Matching blue */
+    padding: 10px 25px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(47, 184, 218, 0.7);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-hire:hover {
+    background-color: var(--blue-btn-hover); /* Darker blue */
+    box-shadow: 0 0 20px rgba(47, 184, 218, 0.7);
+}
+
+/* Theme switcher */
+.theme-switcher {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+}
+
+#theme-toggle {
+    display: none;
+}
+
+.theme-label {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: var(--blue);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.theme-label::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+#theme-toggle:checked + .theme-label::before {
+    transform: translateX(20px);
+}
+
+#theme-toggle:checked + .theme-label {
+    background-color: #333;
+}
+
+
+.hero {
+    text-align: center;
+    padding: 175px 0;
+    background: linear-gradient(to right, #10131a 60%, #0f222d); /* Dégradé avec plus de noir */
+}
+
+
+
+.hero h1 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.highlight {
+    color: var(--blue); /* Matching blue */
+}
+
+.buttons {
+    margin-top: 40px;
+}
+
+.btn-primary {
+    background-color: var(--blue-btn);
+    padding: 15px 25px;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.btn-secondary {
+    background-color: var(--blue-btn);
+    padding: 15px 25px;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--blue-btn-hover);
+}
+.btn-secondary:hover {
+    background-color: var(--blue-btn-hover);
+}
+
+
+#services {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #10131a;
+}
+
+#skills {
+    padding-top: 140px;
+    padding-bottom: 70px;
+    text-align: center;
+    background-color: #10131a;
+}
+
+#skills-other {
+    padding-bottom: 70px;
+    text-align: center;
+    background-color: #10131a;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 40% 1fr; /* 20% pour la partie gauche et le reste pour les cartes */
+    gap: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%; /* Assure que le contenu occupe toute la hauteur */
+}
+
+.services-grid-mirror {
+    display: grid;
+    grid-template-columns: 1fr 40%; /* La partie large est maintenant à gauche, la partie étroite à droite */
+    gap: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%; /* Assure que le contenu occupe toute la hauteur */
+}
+
+
+.content-skills {
+    color: #c8d5e1;
+    padding: 20px;
+    border-radius: 10px;
+    height: 100%; /* Utiliser toute la hauteur disponible */
+    text-align: left;
+    margin-top: 20px;
+}
+
+.content-skills h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cartes par ligne */
+    gap: 20px;
+}
+
+.card {
+    background: linear-gradient(to top, #0e212c 60%, #173443 100%);
+    padding: 20px;
+    width: 100%; /* Utilise la largeur disponible */
+    height: 240px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 2px solid #28495a;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+}
+
+.icon {
+    margin-bottom: 15px;
+}
+
+.icon img {
+    width: 50px;
+}
+
+.card h2 {
+    color: #00b4d8;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.card p {
+    color: #c8d5e1;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+
+#stats {
+    padding: 50px 0; /* Marges en haut et en bas */
+    background: linear-gradient(to right, #10212c, #10131a 70%, #0b0c10); /* Dégradé modifié */
+    display: flex; /* Utilisation de Flexbox pour aligner les éléments */
+    justify-content: center; /* Centrer les éléments horizontalement */
+    text-align: center;
+}
+
+.stats-grid {
+    display: flex; /* Aligne les éléments sur une seule ligne */
+    justify-content: space-around; /* Espacement uniforme entre les éléments */
+    width: 100%; /* Prend toute la largeur disponible */
+}
+
+.stats-grid div {
+    font-size: 1.0rem; /* Taille du texte (par exemple, "Commit GitHub", "Fiabilité des délais") */
+    color: white;
+    text-align: center; /* Centrer le contenu */
+}
+
+.stat-number {
+    font-size: 2.8rem; /* Taille uniquement pour les chiffres */
+    font-weight: bold; /* Met en gras pour plus d'impact */
+    color: white;
+}
+
+
+
+#projects {
+    padding: 75px 0;
+    background: linear-gradient(to right, #060606, #0f2834); /* Dégradé de gauche à droite */
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0 40px;
+    margin-bottom: 50px;
+}
+
+.project-item {
+    position: relative;
+    border: 3px solid var(--blue-border-project);
+    overflow: hidden;
+    border-radius: 8px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease; /* Animation pour le projet entier */
+}
+
+.project-item:hover {
+    transform: scale(1.05); /* Agrandit légèrement le projet au survol */
+}
+
+.project-cover {
+    flex: 1; /* Permet à .project-cover de prendre tout l'espace disponible */
+    height: 100%;
+    width: 100%;
+}
+
+.project-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assure que l'image prend tout l'espace sans déformation */
+    display: block;
+}
+
+.project-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%; /* Zone de texte occupant 30% de la hauteur totale */
+    background: rgba(20, 20, 20, 0.8); /* Fond gris transparent */
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+    transition: height 0.8s ease, background 0.8s ease; /* Transition fluide de la hauteur et du fond */
+}
+
+.project-item:hover .project-info {
+    height: 100%; /* Fait remonter tout le bloc */
+    background: rgba(0, 0, 0, 0.95); /* Fond noir opaque */
+}
+
+.project-info h3, .project-info p {
+    margin: 0;
+    color: white; /* Texte blanc */
+}
+
+.project-info p {
+    color: rgb(189, 187, 187); /* Couleur par défaut */
+    font-size: 0.9em;
+    margin: 5px 0;
+    transition: color 0.3s ease; /* Ajoute une transition pour le changement de couleur */
+}
+
+.project-item:hover .project-info h3 {
+    margin-top: 20px;
+}
+.project-item:hover .project-info p {
+    color: white; /* Le texte devient blanc lorsque le bloc est entièrement visible */
+}
+
+.project-more-info {
+    display: none; /* Masqué par défaut */
+    margin-top: 10px;
+}
+
+.project-item:hover .project-more-info {
+    display: block; /* Affiche le contenu supplémentaire au survol */
+}
+
+.btn-view-more {
+    background-color: var(--blue-btn);
+    padding: 5px 10px;
+    border-radius: 50px;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.btn-view-more:hover {
+    background-color: var(--blue-btn-hover); /* Légèrement plus clair au survol */
+}
+
+
+.btn-all-project {
+    background-color: var(--blue-btn);
+    padding: 15px 25px;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 50px; /* Augmente l'espace entre les projets et le bouton */
+}
+
+.btn-all-project:hover {
+    background-color: var(--blue-btn-hover);
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0b0b0b;
+}
+
+
+.pdf-viewer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: calc(100%); /* Laisse de la place pour la navbar */
+    border: none;
+}
+
+
+
+/* Section Contact */
+#contact {
+    padding: 125px 0;
+    background: linear-gradient(to right, #0f2834, #10131a);
+    text-align: center;
+    color: white;
+}
+
+.contact-container {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #10131b;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(47, 184, 218, 0.7);
+}
+
+.contact-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact-container p {
+    color: #c8d5e1;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: #0b0c10;
+    border: 2px solid var(--blue-border-service);
+    border-radius: 8px;
+    color: white;
+    font-size: 1.1rem;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #c8d5e1;
+    font-style: italic;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--blue);
+    outline: none;
+    box-shadow: 0 0 10px rgba(47, 184, 218, 0.7);
+}
+
+.btn-send {
+    background-color: var(--blue-btn);
+    padding: 15px 30px;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-send:hover {
+    background-color: var(--blue-btn-hover);
+    box-shadow: 0 0 20px rgba(47, 184, 218, 0.8);
+}
+
+#projects-page {
+    padding: 125px 0;
+    background-color: #10131a;
+    text-align: center;
+}
+
+#projects-page > h2 {
+    font-size: 2.5em;
+}
+
+.projects-page-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 projets par ligne */
+    gap: 30px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.project-page-card {
+    background: linear-gradient(to top, #0e212c 60%, #173443 100%);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-page-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+}
+
+.project-page-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.project-page-header h3 {
+    margin-left: 15px;
+    color: #00b4d8;
+}
+
+.project-page-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.project-page-description {
+    color: #c8d5e1;
+}
+
+.project-page-description p {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.project-page-card {
+    scroll-margin-top: 100px; /* Ajuste selon la hauteur de ta navbar */
+}
