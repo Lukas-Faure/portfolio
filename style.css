@@ -205,33 +205,33 @@ body {
     text-align: center;
     background-color: #10131a;
 }
-
+/* Structure de la grille pour le texte et les cartes */
 .services-grid {
     display: grid;
-    grid-template-columns: 40% 1fr; /* 20% pour la partie gauche et le reste pour les cartes */
+    grid-template-columns: 35% 1fr;
     gap: 20px;
     max-width: 90%;
     margin: 0 auto;
     padding: 0 20px;
-    height: 100%; /* Assure que le contenu occupe toute la hauteur */
+    height: 100%;
 }
 
 .services-grid-mirror {
     display: grid;
-    grid-template-columns: 1fr 40%; /* La partie large est maintenant à gauche, la partie étroite à droite */
+    grid-template-columns: 1fr 35%;
     gap: 20px;
     max-width: 90%;
     margin: 0 auto;
     padding: 0 20px;
-    height: 100%; /* Assure que le contenu occupe toute la hauteur */
+    height: 100%;
 }
 
-
+/* Texte d'introduction */
 .content-skills {
     color: #c8d5e1;
     padding: 20px;
     border-radius: 10px;
-    height: 100%; /* Utiliser toute la hauteur disponible */
+    height: 100%;
     text-align: left;
     margin-top: 20px;
 }
@@ -241,24 +241,27 @@ body {
     margin-bottom: 20px;
 }
 
+/* Conteneur des cartes */
 .cards-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 cartes par ligne */
     gap: 20px;
+    justify-content: center;
 }
 
+/* Style des cartes */
 .card {
     background: linear-gradient(to top, #0e212c 60%, #173443 100%);
     padding: 20px;
     width: 100%; /* Utilise la largeur disponible */
-    height: 240px;
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     border: 2px solid #28495a;
 }
@@ -274,6 +277,7 @@ body {
 
 .icon img {
     width: 50px;
+    height: auto;
 }
 
 .card h2 {
@@ -286,8 +290,34 @@ body {
     color: #c8d5e1;
     font-size: 0.9em;
     line-height: 1.4;
+    flex-grow: 1; /* Permet au texte de prendre l'espace restant dans la carte */
 }
 
+/* Adaptation pour écrans moyens */
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* Une colonne pour tout */
+    }
+    .services-grid-mirror {
+        display: flex;
+        flex-direction: column-reverse; /* Affiche le texte avant les cartes */
+        grid-template-columns: 1fr; /* Affichage en une seule colonne */
+        gap: 20px; /* Garde un espacement agréable */
+    }
+
+    .cards-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 cartes par ligne */
+        gap: 20px; /* Garde un espacement entre les cartes */
+    }
+}
+
+/* Adaptation pour petits écrans */
+@media (max-width: 576px) {
+    .cards-wrapper {
+        grid-template-columns: 1fr; /* Une seule carte par ligne */
+    }
+}
 
 #stats {
     padding: 50px 0; /* Marges en haut et en bas */
@@ -600,4 +630,146 @@ footer {
 
 .project-page-card {
     scroll-margin-top: 100px; /* Ajuste selon la hauteur de ta navbar */
+}
+
+
+
+
+/* Ajustements pour les petits écrans */
+@media (max-width: 768px) {
+    .services-grid, .services-grid-mirror {
+        grid-template-columns: 1fr; /* Une seule colonne pour tout l'écran */
+        text-align: center; /* Centrer les textes */
+    }
+
+    .cards-wrapper {
+        grid-template-columns: 1fr; /* Une carte par ligne */
+    }
+}
+
+@media (max-width: 768px) {
+    #skills, #skills-other, #services {
+        padding-top: 80px; /* Réduire l'espacement supérieur */
+        padding-bottom: 40px; /* Réduire l'espacement inférieur */
+    }
+}
+
+#projects {
+    padding: 75px 0;
+    background: linear-gradient(to right, #060606, #0f2834);
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajustement automatique en fonction de l'espace */
+    gap: 20px;
+    padding: 0 40px;
+    margin-bottom: 50px;
+}
+
+.project-item {
+    position: relative;
+    border: 3px solid var(--blue-border-project);
+    overflow: hidden;
+    border-radius: 8px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+}
+
+.project-cover {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.project-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background: rgba(20, 20, 20, 0.8);
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+    transition: height 0.8s ease, background 0.8s ease;
+}
+
+.project-item:hover .project-info {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+}
+
+.project-info h3, .project-info p {
+    margin: 0;
+    color: white;
+}
+
+.project-info p {
+    color: rgb(189, 187, 187);
+    font-size: 0.9em;
+    margin: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.project-item:hover .project-info h3 {
+    margin-top: 20px;
+}
+.project-item:hover .project-info p {
+    color: white;
+}
+
+.project-more-info {
+    display: none;
+    margin-top: 10px;
+}
+
+.project-item:hover .project-more-info {
+    display: block;
+}
+
+.btn-view-more {
+    background-color: var(--blue-btn);
+    padding: 5px 10px;
+    border-radius: 50px;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.btn-view-more:hover {
+    background-color: var(--blue-btn-hover);
+}
+
+.btn-all-project {
+    background-color: var(--blue-btn);
+    padding: 15px 25px;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 50px;
+}
+
+.btn-all-project:hover {
+    background-color: var(--blue-btn-hover);
 }
