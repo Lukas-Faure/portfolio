@@ -9,22 +9,40 @@
 <body>
     <!-- Navbar -->
     <header>
+        <script src="../js/burger-menu.js"></script>
         <nav class="navbar">
             <div class="navbar-container">
                 <div class="logo">
                     <a href="../index.html">Lukas Faure</a>
                 </div>
-                
                 <ul class="nav-links">
-                    <li><a href="../index.html">Acceuil</a></li>
+                    <li><a href="../index.html">Accueil</a></li>
                     <li><a href="skills.html">Compétences</a></li>
                     <li><a href="../index.html#projects" class="active">Projets</a></li>
                     <li><a href="cv.html">CV</a></li>
                 </ul>
                 <a href="contact.html" class="btn-hire">Me Contacter</a>
+                <div class="burger-menu" id="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </nav>
+        <div class="overlay-menu" id="overlay-menu">
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="skills.html">Compétences</a></li>
+                <li><a href="../index.html#projects" class="active">Projets</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html" class="btn-hire">Me Contacter</a></li>
+            </ul>
+            <div class="close-menu" id="close-menu">
+                <span>&#10005;</span> <!-- Icône de la croix -->
+            </div>
+        </div>
     </header>
+    
 
     <!-- Section Projets -->
     <section id="projects-page">

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,34 +7,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="navbar-container">
-                <div class="logo">
-                    <a href="index.html">Lukas Faure</a>
-                </div>
-                
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active">Acceuil</a></li>
-                    <li><a href="pages/skills.html">Compétences</a></li>
-                    <li><a href="#projects">Projets</a></li>
-                    <li><a href="pages/cv.html">CV</a></li>
-                </ul>
-                <!--<div class="theme-switcher">
-                    <span>☀️</span>
-                    <input type="checkbox" id="theme-toggle">
-                    <label for="theme-toggle" class="theme-label"></label>
-                    <span>🌙</span>
-                </div>
-                <script src="script.js"></script>-->
-                <a href="pages/contact.html" class="btn-hire">Me Contacter</a>
+<header>
+    <script src="js/burger-menu.js"></script>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="index.html">Lukas Faure</a>
             </div>
-        </nav>
-    </header>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="pages/skills.html">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="pages/cv.html">CV</a></li>
+            </ul>
+            <a href="pages/contact.html" class="btn-hire">Me Contacter</a>
+            <div class="burger-menu" id="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <div class="overlay-menu" id="overlay-menu">
+        <ul>
+            <li><a href="index.html" class="active">Accueil</a></li>
+            <li><a href="pages/skills.html">Compétences</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="pages/cv.html">CV</a></li>
+            <li><a href="pages/contact.html" class="btn-hire">Me Contacter</a></li>
+        </ul>
+        <div class="close-menu" id="close-menu">
+            <span>&#10005;</span> <!-- Icône de la croix -->
+        </div>
+    </div>
+</header>
+
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <h1><span class="highlight">Recherche de Stage - Developpeur</a></span><br>Lukas Faure</h1>
+        <h1><span class="highlight">Recherche de Stage - Développeur</a></span><br>Lukas Faure</h1>
         <p><br>Etudiant deuxième année de <span class="highlight"><a href="https://iut2.univ-grenoble-alpes.fr/l-iut2/qui-sommes-nous-/les-departements-de-l-iut2/informatique-info--149104.kjsp" style="color: inherit; text-decoration: none;">BUT Informatique</a></span> <br>Au sein de <span class="highlight"><a href="https://iut2.univ-grenoble-alpes.fr/" style="color: inherit; text-decoration: none;">l'IUT2</a></span> de <span class="highlight"><a href="https://www.grenoble.fr/" style="color: inherit; text-decoration: none;">Grenoble (38)</a></span><br></p>
         <div class="buttons">
             <a href="pages/contact.html" class="btn-primary">Me Contacter</a>
