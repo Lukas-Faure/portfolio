@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from "$app/paths";
   import type { Project } from "$lib/data/projects";
 
   let { project }: { project: Project } = $props();
@@ -29,7 +30,13 @@
       {/if}
     </div>
   </header>
-  <img src={project.coverImage} alt={project.title} class="hero-image" />
+  <img
+    src={project.coverImage.startsWith("/")
+      ? `${base}${project.coverImage}`
+      : project.coverImage}
+    alt={project.title}
+    class="hero-image"
+  />
 
   <div class="section">
     <h2 class="section-title"><span class="token">##</span> Présentation</h2>

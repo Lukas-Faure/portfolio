@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from "$app/paths";
   import Meteor from "../UI/Meteor.svelte";
   import { TimelineItemType, type TimelineItem } from "$lib/data/about";
 
@@ -26,7 +27,7 @@
       >
         {#if 'logo' in item && item.logo}
           <img 
-            src={item.logo} 
+            src={item.logo.startsWith("/") ? `${base}${item.logo}` : item.logo} 
             alt={item.type === TimelineItemType.EXPERIENCE ? (item as any).company : (item.type === TimelineItemType.EDUCATION ? (item as any).institution : 'Logo')} 
             class="axis-logo" 
           />

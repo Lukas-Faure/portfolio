@@ -1,11 +1,17 @@
 <script lang="ts">
+  import { base } from "$app/paths";
   import type { Project } from "$lib/data/projects";
   import TerminalHeader from "$lib/components/UI/TerminalHeader.svelte";
 
   let { project }: { project: Project } = $props();
 
   const slug = $derived(project.slug);
-  const detailUrl = $derived(`/projects/${slug}`);
+  const detailUrl = $derived(`${base}/projects/${slug}`);
+  const coverImage = $derived(
+    project.coverImage.startsWith("/")
+      ? `${base}${project.coverImage}`
+      : project.coverImage,
+  );
   const windowTitle = $derived(
     `~/projects/${project.title.toLowerCase().replace(/\s+/g, "-")}.json`,
   );
@@ -16,7 +22,7 @@
     <TerminalHeader title={windowTitle} hideDotsOnMobile={false} />
     <div class="window-body">
       <div class="image-area">
-        <img src={project.coverImage} alt="" class="hero" />
+        <img src={coverImage} alt="" class="hero" />
         <div class="actions-overlay">
           <div class="btn-group">
             <a href={detailUrl} class="btn-primary">

@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { base } from "$app/paths";
     import FloatingShape from "$lib/components/Hero/FloatingShape.svelte";
 </script>
 
@@ -6,7 +7,7 @@
     <div class="image-portal">
         <div class="portal-glow"></div>
         <div class="image-wrapper glass-card">
-            <img src="/images/photo-optimized.jpg" alt="Lukas Faure" />
+            <img src="{base}/images/photo-optimized.jpg" alt="Lukas Faure" />
         </div>
 
         <FloatingShape class="shape-1" content="★" color="var(--accent-cyan)" />

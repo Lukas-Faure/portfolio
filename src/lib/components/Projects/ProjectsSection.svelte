@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from "$app/paths";
   import ProjectCard from "$lib/components/Projects/ProjectCard.svelte";
   import { ProjectService } from "$lib/services/projectService";
 
@@ -16,7 +17,7 @@
   </div>
 
   <div class="view-all-container">
-    <a href="/projects" class="btn-secondary">
+    <a href="{base}/projects" class="btn-secondary">
       <span>Voir tous les projets</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"

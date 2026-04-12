@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from "$app/paths";
   interface Props {
     mode?: "auto" | "manual";
     progress?: number;
@@ -63,7 +64,11 @@
               style="--delay: {i * 0.1}s; --x-offset: {Math.random() * 80 -
                 40}px"
             >
-              <img src={logoUrl} alt="" class:invert={isInverted} />
+              <img
+                src={logoUrl.startsWith("/") ? `${base}${logoUrl}` : logoUrl}
+                alt=""
+                class:invert={isInverted}
+              />
             </div>
           {/each}
         </div>

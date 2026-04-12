@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from "$app/paths";
+  
   interface BreadcrumbItem {
     label: string;
     href: string;
@@ -13,7 +15,7 @@
 </script>
 
 <div class="breadcrumb">
-  <a href="/" class="crumb">accueil</a>
+  <a href="{base}/" class="crumb">accueil</a>
   <span class="sep">/</span>
   
   {#each items as item}

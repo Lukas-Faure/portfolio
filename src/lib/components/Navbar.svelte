@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from "$app/paths";
   let isScrolled = $state(false);
 
   if (typeof window !== "undefined") {
@@ -10,15 +11,15 @@
 
 <nav class:scrolled={isScrolled}>
   <div class="container nav-content">
-    <a href="/" class="logo">
+    <a href="{base}/" class="logo">
       <span class="heading-gradient">LF</span>
     </a>
 
     <div class="links">
-      <a href="/">Accueil</a>
-      <a href="/cv">CV</a>
-      <a href="/projects">Projets</a>
-      <a href="/contact" class="btn-primary">Contact</a>
+      <a href="{base}/">Accueil</a>
+      <a href="{base}/cv">CV</a>
+      <a href="{base}/projects">Projets</a>
+      <a href="{base}/contact" class="btn-primary">Contact</a>
     </div>
   </div>
 </nav>

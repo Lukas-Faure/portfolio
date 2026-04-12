@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from "$app/paths";
   import { page } from "$app/state";
   import { ProjectService } from "$lib/services/projectService";
   import { IDEController } from "$lib/controllers/ideController.svelte";
@@ -29,10 +30,10 @@
     <div class="top-nav-wrapper">
       <div class="nav-stack">
         <Breadcrumb
-          items={[{ label: "projets", href: "/projects" }]}
+          items={[{ label: "projets", href: `${base}/projects` }]}
           current={project.slug}
         />
-        <a href="/projects" class="back-btn">
+        <a href="{base}/projects" class="back-btn">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="14"
@@ -69,7 +70,7 @@
   {:else}
     <div class="not-found">
       <h1>404: PROJET_NON_TROUVÉ</h1>
-      <a href="/projects">retour</a>
+      <a href="{base}/projects">retour</a>
     </div>
   {/if}
 </div>

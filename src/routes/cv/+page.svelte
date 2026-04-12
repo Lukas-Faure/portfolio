@@ -1,9 +1,10 @@
 <script lang="ts">
+  import { base } from "$app/paths";
   import Navbar from "$lib/components/Navbar.svelte";
   import PdfViewer from "$lib/components/CV/PdfViewer.svelte";
   import Breadcrumb from "$lib/components/Common/Breadcrumb.svelte";
   
-  const cvPath = "/pdf/CV_Faure_Lukas.pdf";
+  const cvPath = `${base}/pdf/CV_Faure_Lukas.pdf`;
 </script>
 
 <svelte:head>

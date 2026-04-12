@@ -1,3 +1,7 @@
+<script lang="ts">
+  import { base } from "$app/paths";
+</script>
+
 <div class="hero-left">
     <h1 class="font-display">
         Lukas <span class="text-glow">Faure</span> <br />
@@ -16,7 +20,7 @@
     </p>
 
     <div class="cta-group">
-        <a href="/contact" class="btn-primary">
+        <a href="{base}/contact" class="btn-primary">
             Me contacter
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +37,7 @@
                 ></polyline></svg
             >
         </a>
-        <a href="/projects" class="btn-secondary group">
+        <a href="{base}/projects" class="btn-secondary group">
             Voir mes projets
             <svg
                 xmlns="http://www.w3.org/2000/svg"

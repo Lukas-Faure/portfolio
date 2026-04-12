@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from "$app/paths";
   import { type IDEController, IDEFileName } from "$lib/controllers/ideController.svelte";
   import MarkdownView from "$lib/components/Projects/IDE/MarkdownView.svelte";
   import BlueprintView from "$lib/components/Projects/IDE/BlueprintView.svelte";
@@ -47,7 +48,7 @@
               Vous avez fermé tous les dossiers... Il vous reste une dernière
               action :
             </p>
-            <a href="/contact" class="contact-btn-big">
+            <a href="{base}/contact" class="contact-btn-big">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"

@@ -1,0 +1,1 @@
+# This file tells GitHub Pages to bypass Jekyll processing, which is necessary for SvelteKit's _app folder.
