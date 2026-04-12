@@ -8,7 +8,17 @@ const config = {
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 		adapter: adapter({
 			fallback: '404.html'
-		})
+		}),
+		prerender: {
+			handleHttpError: ({ path, message }) => {
+				if (path === '/favicon.png') {
+					console.warn('Missing favicon.png during prerender - continuing build.');
+					return;
+				}
+
+				throw new Error(message);
+			}
+		}
 	}
 };
 
