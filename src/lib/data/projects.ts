@@ -1,0 +1,406 @@
+export interface DescriptionBlock {
+  title: string;
+  content: string;
+}
+
+export interface TechDetail {
+  name: string;
+  value: string;
+}
+
+export interface Project {
+  slug: string;
+  title: string;
+  description: string;
+  longDescription?: DescriptionBlock[];
+  coverImage: string;
+  tags: string[];
+  date: string;
+  projectUrl?: string;
+  githubUrl?: string;
+  features?: string[];
+  techDetails?: TechDetail[];
+  category?: string;
+  highlighted?: boolean;
+}
+
+export const projects: Project[] = [
+  {
+    slug: "proxifarm",
+    title: "ProxiFarm",
+    description: "Application mobile de mise en relation entre producteurs locaux et consommateurs pour favoriser les circuits courts.",
+    longDescription: [
+      {
+        title: "Concept",
+        content: "Née suite aux manifestations agricoles de février 2024, ProxiFarm a été pensée comme le « Leboncoin » du circuit court. Son objectif est de résoudre le manque de visibilité des producteurs locaux et de faciliter l'accès aux produits de la ferme pour des consommateurs souvent perdus face aux différentes alternatives de la grande distribution."
+      },
+      {
+        title: "Mon Rôle & Stack Technique",
+        content: "Développée en binôme sur Flutter/Dart, j'ai agi en tant que développeur Full-Stack avec une forte supervision. J'ai conçu l'intégralité du back-end (gestion des données, conformité stricte au RGPD, logique métier), intégré un système de monétisation par abonnement et assuré la revue de code puis le nettoyage (clean architecture) de l'interface front-end."
+      },
+      {
+        title: "Déploiement & Rétrospective",
+        content: "Le projet a été mené à son terme avec des publications réussies sur l'App Store et le Google Play Store. Bien que techniquement aboutie, l'adoption commerciale n'a pas été au rendez-vous. L'analyse de ce qui a marché ou non a mis en lumière des leçons précieuses tel qu'un marketing trop tardif, une cible (les producteurs) peu numérisée nécessitant plus d'accompagnement et des craintes liées à la concurrence. Cette expérience m'a profondément sensibilisé à l'importance d'inclure les utilisateurs finaux dès les premières phases de prototypage (approche centrée utilisateur)."
+      }
+    ],
+    coverImage: "/images/projects/proxifarm.png",
+    tags: ["Flutter", "Dart", "Firebase", "App Store", "Google Play"],
+    date: "Avril 2024 - Août 2024",
+    features: [
+      "Géolocalisation des producteurs",
+      "Messagerie en temps réel",
+      "Prise de rendez-vous",
+      "Paiements in-app par abonnement",
+      "Respect du RGPD",
+      "Tableaux de bord statistiques"
+    ],
+    techDetails: [
+      { name: "Plateformes", value: "iOS & Android" },
+      { name: "Framework", value: "Flutter / Dart" },
+      { name: "Backend", value: "Firebase" },
+      { name: "Cycle", value: "6 Mois (Analyse à Déploiement)" }
+    ],
+    highlighted: true
+  },
+  {
+    slug: "ludi-map",
+    title: "Ludi-Map",
+    description: "Jeu web ludo-éducatif inspiré de GeoGuessr, dédié à la découverte du patrimoine historique de la région Auvergne-Rhône-Alpes.",
+    longDescription: [
+      {
+        title: "Le Concept",
+        content: "Inspiré par le jeu GeoGuessr, Ludi-Map a pour but de valoriser le patrimoine culturel matériel français. Le défi est de localiser précisément plus de 440 monuments historiques de la région Auvergne-Rhône-Alpes, non pas sur des cartes modernes mais sur des fonds de carte de l'État-Major datant de 1852."
+      },
+      {
+        title: "L'Expérience de Jeu",
+        content: "Pour s'adapter à tous les profils, le jeu propose deux modes. Le mode 'Histoire' privilégie l'exploration, la précision de l'estimation permet de débloquer plus ou moins d'informations culturelles détaillées sur chaque monument. À l'inverse, le mode 'Challenge' offre une course contre la montre compétitive où le but est de retrouver une série de monuments le plus rapidement possible."
+      },
+      {
+        title: "Architecture & Données",
+        content: "Les données historiques ont été constituées via du web scraping. Côté développement, l'application a été structurée autour du patron de conception MVC (Modèle-Vue-Contrôleur) avec PHP et JavaScript, garantissant une séparation claire des responsabilités."
+      }
+    ],
+    coverImage: "/images/projects/logo_ludi-map.png",
+    githubUrl: "https://github.com/Lukas-Faure/ludi-map",
+    tags: ["JavaScript", "PHP", "PostgreSQL", "HTML/CSS", "Scraping"],
+    date: "Octobre 2024 - Janvier 2025",
+    features: [
+      "Mécanique de jeu type GeoGuessr",
+      "Modes Histoire & Challenge",
+      "Cartographie historique (1852)",
+      "Sélection par département",
+      "Gestion des utilisateurs et scores"
+    ],
+    techDetails: [
+      { name: "Architecture", value: "MVC" },
+      { name: "Base de données", value: "PostgreSQL" },
+      { name: "Acquisition Data", value: "Web Scraping" }
+    ],
+    highlighted: true
+  },
+  {
+    slug: "coup2main",
+    title: "Coup2Main",
+    description: "[Projet démonstratif] Plateforme web moderne d'entraide de proximité, permettant aux habitants d'un quartier de proposer ou demander des services.",
+    longDescription: [
+      {
+        title: "Le Concept",
+        content: "Coup2Main est une application web démonstrative repensant l'entraide locale. L'objectif est de recréer du lien social en permettant aux voisins d'un même quartier de publier des annonces pour demander un coup de main au quotidien ou à l'inverse, de proposer leurs services aux autres."
+      },
+      {
+        title: "Parcours Utilisateur",
+        content: "L'application propose tout ce qu'on peut retrouver sur un site web, de la connexion via Google OAuth jusqu'à la rencontre physique. Les utilisateurs peuvent utiliser un filtrage (par type, catégorie ou ville) pour trouver la bonne annonce, échanger via une messagerie intégrée et gérer la planification de leurs rendez-vous directement sur la plateforme."
+      },
+      {
+        title: "Stack Technique Moderne",
+        content: "Le projet a été développé en utilisant Svelte 5 avec SvelteKit et TypeScript. L'interface est conçue avec TailwindCSS. Côté back-end, la base de données SQLite est pilotée via Prisma (un ORM) et l'ensemble de l'application est conteneurisé avec Docker pour assurer un déploiement rapide."
+      }
+    ],
+    coverImage: "/images/projects/C2M.png",
+    tags: ["Svelte 5", "SvelteKit", "TypeScript", "Prisma", "Docker", "TailwindCSS"],
+    date: "Juillet 2025",
+    githubUrl: "https://github.com/Lukas-Faure/coup2main",
+    features: [
+      "Authentification sécurisée (Google OAuth via Auth.js)",
+      "Création et gestion des offres/demandes",
+      "Filtres",
+      "Messagerie utilisateur intégrée",
+      "Système de planification de rendez-vous"
+    ],
+    techDetails: [
+      { name: "Frontend", value: "SvelteKit + TypeScript" },
+      { name: "Database & ORM", value: "SQLite + Prisma" },
+      { name: "Infrastructure", value: "Docker" }
+    ],
+    highlighted: true
+  },
+  {
+    slug: "gamejam",
+    title: "Projet Game Jam : Le château sans portes",
+    description: "Jeu d'infiltration 2D développé en 3 jours lors d'une Game Jam sur le thème « Apparaître / Disparaître ».",
+    longDescription: [
+      {
+        title: "Le Challenge",
+        content: "Réalisation d'un jeu vidéo en 3j de formation par une équipe de 5 personnes, avec pour contrainte de découvrir et d'utiliser Python avec la bibliothèque Pygame en totale autonomie. Le thème imposé était « Apparaître / Disparaître »."
+      },
+      {
+        title: "Gameplay & Évolution",
+        content: "Le joueur incarne un voleur devant dérober 24 objets dans un château gardé. La mécanique centrale repose sur des trappes permettant de se cacher dans les sous-sols (disparaître) pour ressortir plus loin (apparaître). La difficulté est dynamique : plus le joueur vole d'objets, plus les gardes deviennent rapides et vigilants. De plus, le temps s'écoule, à 6h du matin, des renforts arrivent et à 8h, les portes sont bloquées, rendant la victoire impossible."
+      },
+      {
+        title: "Mon Rôle - Back-end",
+        content: "Je me suis concentré sur les mécaniques de jeu et le back-end. J'ai intégralement géré le système de rendu des lumières, les calculs de collisions, le champ de vision du joueur, ainsi que la génération des cônes de vision des gardes (raycasting) pour détecter le joueur."
+      }
+    ],
+    coverImage: "/images/projects/Jaquette.png",
+    tags: ["Python", "Pygame", "Game Jam"],
+    date: "Septembre 2025",
+    githubUrl: "https://github.com/Lukas-Faure/gamejam-chateau-sans-portes",
+    features: [
+      "Cônes de vision et gestion de la lumière",
+      "Collisions et Raycasting",
+      "Difficulté adaptative (IA des gardes)",
+      "Cycle jour/nuit avec événements temporels",
+      "Mécanique d'infiltration à deux niveaux (RDC / Sous-sol)"
+    ],
+    techDetails: [
+      { name: "Framework", value: "Pygame" },
+      { name: "Duration", value: "3 Jours" },
+      { name: "Team Size", value: "5 Personnes" }
+    ],
+    highlighted: true
+  },
+  {
+    slug: "vector-interpreter",
+    title: "Interpréteur d'Opérations Vectorielles",
+    description: "Création d'un interpréteur pour un langage d'opérations sur des vecteurs.",
+    longDescription: [
+      {
+        title: "Le Projet",
+        content: "Développement from scratch d'un compilateur et interpréteur en Java. Le projet s'appuie sur ANTLR4 pour l'analyse lexicale et syntaxique. L'architecture respecte strictement le patron de conception (Design Pattern) Visiteur, avec une séparation nette entre l'analyse sémantique (Static Type Checking) et le moteur d'exécution (Runtime)."
+      },
+      {
+        title: "Fonctionnalités du Langage",
+        content: "Le langage supporte le typage dynamique (int, real, boolean, array), les opérations statistiques et ensemblistes, le slicing de tableaux, les fonctions de mapping, ainsi que le contrôle de flux (if/else) et les entrées interactives utilisateur en cours d'exécution."
+      },
+      {
+        title: "Qualité Logicielle",
+        content: "Création d'un outil de test garantissant une couverture de code optimale. Le programme gère de manière robuste les erreurs (variables non déclarées, erreurs de typage, dépassement d'index) via des exceptions sémantiques personnalisées avant toute exécution."
+      }
+    ],
+    coverImage: "/images/projects/antlr-interpreteur.png",
+    githubUrl: "https://github.com/Lukas-Faure/Projet_ANTLR_GrammairePerso",
+    tags: ["Java", "ANTLR4", "Compilation", "Pattern Visiteur"],
+    date: "Mars 2026",
+    features: [
+      "Création de grammaire",
+      "Vérification sémantique statique",
+      "Typage dynamique",
+      "Patron de conception Visiteur",
+      "Framework de tests automatisés"
+    ],
+    techDetails: [
+      { name: "Langage", value: "Java" },
+      { name: "Parser", value: "ANTLR4" },
+      { name: "Architecture", value: "Double Visiteur" }
+    ],
+    highlighted: true
+  },
+  {
+    slug: "rallye-manager",
+    title: "Rallye Manager",
+    description: "Application web Full-Stack de gestion et d'organisation de rallyes automobiles.",
+    longDescription: [
+      {
+        title: "Le Projet",
+        content: "Réalisé dans le cadre d'un projet académique, l'objectif principal était de concevoir et déployer une architecture web complète. Le système repose sur une séparation stricte des responsabilités : une interface cliente dynamique (Front-end), un serveur logique communiquant via une API REST (Back-end), et une base de données NoSQL."
+      },
+      {
+        title: "Parcours Utilisateurs",
+        content: "L'application gère deux parcours utilisateurs distincts avec un système d'authentification. L'espace 'Organisateur' offre un panel d'administration pour créer, modifier et supprimer des rallyes, définir les catégories de véhicules et gérer les étapes spéciales. L'espace 'Compétiteur' permet aux pilotes de consulter les classements en temps réel, d'étudier les segments et de s'inscrire aux événements."
+      },
+      {
+        title: "DevOps & Déploiement",
+        content: "Pour garantir une reproductibilité parfaite sur n'importe quel environnement, l'intégralité de l'écosystème (le client Angular, l'API Node.js et la base MongoDB) a été conteneurisée avec Docker. Le projet se déploie instantanément via un simple 'docker compose up'."
+      }
+    ],
+    coverImage: "/images/projects/rallye.jpeg",
+    tags: ["Angular", "Node.js", "Express", "MongoDB", "Docker", "OPEN API"],
+    date: "Novembre 2025",
+    githubUrl: "https://github.com/Lukas-Faure/Rallye-Manager",
+    features: [
+      "Architecture Client / API / Base de données",
+      "Gestion des rôles (Organisateur vs Pilote)",
+      "CRUD complet des rallyes, spéciales et segments",
+      "Système d'inscription aux événements",
+      "Déploiement automatisé via Docker Compose"
+    ],
+    techDetails: [
+      { name: "Frontend", value: "Angular" },
+      { name: "Backend", value: "Node.js + Express" },
+      { name: "Database", value: "MongoDB (NoSQL)" },
+      { name: "DevOps", value: "Docker" }
+    ],
+    highlighted: false
+  },
+  {
+    slug: "myrallye",
+    title: "MyRallye",
+    description: "Logiciel desktop de gestion logistique pour organisateurs de rallyes.",
+    longDescription: [
+      {
+        title: "Collaboration & Gestion de Projet",
+        content: "Réalisé au sein d'une équipe de 5 développeurs. Nous avons dû coordonner nos développements via Git, répartir les modules et assurer la cohérence globale du logiciel à travers des revues de code régulières."
+      },
+      {
+        title: "Conception Rigoureuse & Client Lourd",
+        content: "L'application offre aux organisateurs un outil robuste pour piloter leurs événements (écuries, participants, étapes). En amont du code JavaFX, nous avons produit un dossier de conception complet sous Visual Paradigm, incluant les diagrammes de classes et de séquences, garantissant ainsi une architecture logicielle stable et évolutive."
+      }
+    ],
+    coverImage: "/images/projects/logo_my_rally.png",
+    tags: ["Java", "JavaFX", "UML", "Visual Paradigm", "Travail d'équipe"],
+    date: "2024",
+    features: [
+      "Gestion centralisée des écuries et des équipages",
+      "Planification des étapes et des segments de course",
+      "Interface d'administration ergonomique (Client lourd)",
+      "Modélisation UML complète (Cas d'utilisation & Classes)",
+      "Gestion de projet collaborative à 5"
+    ],
+    techDetails: [
+      { name: "Équipe", value: "5 Personnes" },
+      { name: "Interface", value: "JavaFX / Scene Builder" },
+      { name: "Conception", value: "UML 2.0 (Visual Paradigm)" },
+      { name: "Workflow", value: "Git / Agile" }
+    ],
+    highlighted: false
+  },
+  {
+    slug: "civilynation",
+    title: "CivilyNation",
+    description: "Plugin de simulation géopolitique et économique complète pour serveurs Minecraft multijoueurs.",
+    longDescription: [
+      {
+        title: "Simulation Géopolitique & Vie Sociale",
+        content: "L'objectif de CivilyNation était de dynamiser le jeu en introduisant des concepts de nations et de citoyenneté. Le plugin permet aux joueurs de fonder des pays, de définir des frontières et de gérer une hiérarchie politique, transformant le simple mode survie en une expérience de gestion de micro-états."
+      },
+      {
+        title: "Économie Dynamique & Commerce",
+        content: "Au cœur du projet se trouve une gestion économique que les joueurs créee gérant le commerce entre nations. Cette couche de simulation oblige les joueurs à coopérer ou à entrer en concurrence donnant un autre goùt aux survies minecraft."
+      }
+    ],
+    coverImage: "/images/projects/logo_minecraft.png",
+    tags: ["Java", "Spigot API", "MySQL", "Game Design", "Système Économique"],
+    date: "Décembre 2023",
+    features: [
+      "Système de fondation et gestion de pays (Claims)",
+      "Moteur économique intégré avec monnaie virtuelle",
+      "Système de commerce (Trade) entre joueurs et nations",
+      "Gestion des permissions et rôles administratifs",
+    ],
+    techDetails: [
+      { name: "Plateforme", value: "Spigot" },
+      { name: "Langage", value: "Java 17+" },
+    ],
+    highlighted: false
+  },
+  {
+    slug: "proxifarm-web",
+    title: "ProxiFarm - Site Web",
+    description: "Site web vitrine et centre de gestion de comptes pour l'écosystème ProxiFarm, intégrant la monétisation Stripe.",
+    longDescription: [
+      {
+        title: "Le Rôle du Portail",
+        content: "Complément indispensable de l'application mobile, ce site web a été conçu comme la vitrine officielle de ProxiFarm. Son but premier était d'attirer de nouveaux utilisateurs, expliquer le projet et gérer ses données. Il permettait de fournir des tutoriels d'utilisation détaillés pour accompagner notre cible (les producteurs), souvent peu familier avec les outils numériques."
+      },
+      {
+        title: "Monétisation & API",
+        content: "C'est sur cette plateforme que j'ai implémenté la toute première architecture de paiement du projet en intégrant l'API Stripe. J'ai également développé un système complet de codes promotionnels et cadeaux : les utilisateurs pouvaient bénéficier de codes qui débloquaient instantanément des fonctionnalités prenium dans leur application mobile (in-app)."
+      },
+      {
+        title: "Support & Sécurité",
+        content: "Le back-end, développé en PHP. J'y ai géré toutes les procédures de compte utilisateur : flux de réinitialisation de mots de passe (mot de passe oublié), procédures de vérification d'emails, et formulaires de contact pour le support client."
+      }
+    ],
+    coverImage: "/images/projects/proxifarm.png",
+    tags: ["HTML/CSS natif", "JavaScript natif", "PHP", "Stripe API"],
+    date: "Juin 2024 - Juillet 2024",
+    features: [
+      "Landing page promotionnelle & tutoriels",
+      "Intégration de paiements sécurisés (Stripe)",
+      "Génération et activation de codes in-app",
+      "Gestion sécurisée des mots de passe/emails",
+      "Formulaires de contact et support utilisateur"
+    ],
+    techDetails: [
+      { name: "Frontend", value: "HTML / CSS / JS" },
+      { name: "Backend", value: "PHP" },
+      { name: "Paiement", value: "Stripe API" }
+    ],
+    highlighted: false
+  },
+  {
+    slug: "mon-carnet-de-stage",
+    title: "Mon Carnet de Stage",
+    description: "Audit, rétro-conception et optimisation d'une application de suivi de candidatures selon la norme ISO 25000.",
+    longDescription: [
+      {
+        title: "Modernisation de Code Legacy",
+        content: "Ce projet consistait à reprendre une application existante pour en améliorer la robustesse. Le défi majeur a été la phase de rétro-conception : analyser un code source non documenté pour reconstruire les diagrammes UML et stabiliser une structure de données cohérente."
+      },
+      {
+        title: "Optimisation & Qualité (ISO 25000)",
+        content: "L'intervention s'est concentrée sur deux axes. Côté Back-end (Symfony), j'ai refactorisé la logique métier pour optimiser les performances des algorithmes d'affectation. Côté Mobile (Android Studio), j'ai refondu l'ergonomie des interfaces pour offrir une expérience utilisateur plus fluide et intuitive, tout en respectant les standards de la norme ISO 25000."
+      }
+    ],
+    coverImage: "/images/projects/mon-carnet-stage-icon.png",
+    tags: ["Java", "Android Studio", "Symfony", "PHP", "UML", "Qualité Logicielle"],
+    date: "Janvier 2024 - Mai 2024",
+    features: [
+      "Rétro-conception complète (Reverse Engineering)",
+      "Audit de qualité (Norme ISO 25000)",
+      "Refactoring du moteur d'affectation des stages",
+      "Optimisation de l'architecture Back-end Symfony",
+      "Refonte de l'interface utilisateur mobile"
+    ],
+    techDetails: [
+      { name: "Méthodologie", value: "Agile / Rétro-conception UML" },
+      { name: "Frameworks", value: "Symfony / Android SDK" },
+      { name: "Standard", value: "ISO/IEC 25000" }
+    ],
+    highlighted: false
+  },
+  {
+    slug: "nutri-score",
+    title: "Analyse du Nutri-Score",
+    description: "Audit et analyse statistique de données complexes pour évaluer l'impact nutritionnel des produits alimentaires.",
+    longDescription: [
+      {
+        title: "Data Engineering & Nettoyage",
+        content: "Face à des jeux de données volumineux et souvent hétérogènes, j'ai mis en place des processus de nettoyage (Data Cleaning) rigoureux sous PostgreSQL. L'objectif était de traiter les valeurs manquantes, de normaliser les unités et de structurer la base de données pour garantir l'intégrité des analyses futures."
+      },
+      {
+        title: "Analyse Statistique & Visualisation",
+        content: "À l'aide de R Studio, j'ai réalisé une exploration statistique approfondie pour décrypter les algorithmes du Nutri-Score. Ce travail a abouti à la création de visualisations de données (Dataviz) complexes permettant d'interpréter les tendances de l'industrie agroalimentaire. J'ai conclu ce projet par la rédaction d'un compte rendu d'expertise corrélant la composition nutritionnelle et le score final obtenu."
+      }
+    ],
+    coverImage: "/images/projects/logo_nutri-score.png",
+    tags: ["PostgreSQL", "R Studio", "Data Analysis", "Statistiques", "Dataviz"],
+    date: "Février 2024",
+    features: [
+      "Nettoyage et structuration de datasets complexes",
+      "Analyses statistiques descriptives et inférentielles",
+      "Visualisation de données avancée avec R",
+      "Interprétation et corrélation de variables nutritionnelles",
+      "Rédaction de rapports d'aide à la décision"
+    ],
+    techDetails: [
+      { name: "SGBD", value: "PostgreSQL" },
+      { name: "Analyse", value: "R Studio / Tidyverse" },
+      { name: "Focus", value: "Data Cleaning & Statistique" }
+    ],
+    highlighted: false
+  },
+];
+
+
