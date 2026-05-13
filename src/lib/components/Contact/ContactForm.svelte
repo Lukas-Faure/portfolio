@@ -148,7 +148,7 @@
   }
 
   .submit-btn {
-    background: #238636;
+    background: var(--blue);
     color: white;
     border: none;
     padding: 0.7rem 1.8rem;
@@ -164,7 +164,7 @@
   }
 
   .submit-btn:hover:not(:disabled) {
-    background: #2ea043;
+    background: var(--blue-hover);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(35, 134, 54, 0.3);
     border-color: rgba(255, 255, 255, 0.2);

@@ -1,6 +1,9 @@
 <script lang="ts">
   import { base } from "$app/paths";
-  import { type IDEController, IDEFileName } from "$lib/controllers/ideController.svelte";
+  import {
+    type IDEController,
+    IDEFileName,
+  } from "$lib/controllers/ideController.svelte";
   import MarkdownView from "$lib/components/Projects/IDE/MarkdownView.svelte";
   import BlueprintView from "$lib/components/Projects/IDE/BlueprintView.svelte";
   import ConfigView from "$lib/components/Projects/IDE/ConfigView.svelte";
@@ -111,7 +114,7 @@
     align-items: center;
     gap: 0.75rem;
     padding: 1rem 2rem;
-    background: #5da4f6;
+    background: var(--blue);
     color: #fff;
     text-decoration: none;
     border-radius: 8px;
@@ -119,7 +122,7 @@
     transition: all 0.3s;
   }
   .contact-btn-big:hover {
-    background: #4a93e5;
+    background: var(--blue-hover);
     transform: scale(1.05);
   }
 

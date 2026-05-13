@@ -73,6 +73,4 @@
   .number {
     color: var(--accent-cyan);
   }
-
-
 </style>

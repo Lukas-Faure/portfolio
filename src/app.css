@@ -8,6 +8,8 @@
   --accent-purple: #8b5cf6;
   --accent-cyan: #06b6d4;
   --accent-blue: #5da4f6;
+  --blue: #0062cc;
+  --blue-hover: #0056b3;
   --accent-gradient: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
 
   --glass-border: rgba(255, 255, 255, 0.1);
@@ -16,7 +18,7 @@
   --section-padding: 8rem 2rem;
 
   --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-  
+
   --timeline-padding: 3.5rem;
   --timeline-offset: 50px;
 }

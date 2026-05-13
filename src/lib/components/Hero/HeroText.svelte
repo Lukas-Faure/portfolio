@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { base } from "$app/paths";
+    import { base } from "$app/paths";
 </script>
 
 <div class="hero-left">
@@ -98,7 +98,7 @@
     }
 
     .btn-primary {
-        background: #0062cc;
+        background: var(--blue);
         padding: 0.75rem 2.2rem;
         border-radius: 0.5rem;
         font-weight: 600;

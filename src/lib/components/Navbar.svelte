@@ -75,7 +75,7 @@
   }
 
   .btn-primary {
-    background: var(--accent-blue);
+    background: var(--blue);
     padding: 0.6rem 1.5rem;
     border-radius: 2rem;
     color: white !important;

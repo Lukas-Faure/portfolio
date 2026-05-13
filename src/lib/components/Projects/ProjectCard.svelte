@@ -72,6 +72,8 @@
     --card-bg: #0d1117;
     --card-border: #30363d;
     --accent-blue: #5da4f6;
+    --blue: #0062cc;
+    --blue-hover: #0056b3;
     --accent-green: #3fb950;
     --accent-violet: #8b5cf6;
     --text-main: #c9d1d9;
@@ -108,7 +110,7 @@
   }
 
   .btn-secondary:hover {
-    border-color: var(--accent-blue);
+    border-color: var(--blue-hover);
     background: #21262d;
     transform: translateY(-2px) scale(1.05);
   }
