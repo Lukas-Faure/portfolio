@@ -52,7 +52,7 @@ export const bio = "Actuellement en alternance au laboratoire G-SCOP à Grenoble
 export const experiences: Experience[] = [
   {
     title: "Alternance Développeur C++",
-    company: "Laboratoire G-SCOP — Grenoble INP",
+    company: "Laboratoire G-SCOP - Grenoble INP",
     period: "Sept 2025 - Aujourd'hui",
     description: "Au sein de l'équipe CIPP, je conçois en binôme des solutions numériques sur mesure pour les chercheurs. Mon projet majeur est le développement d'un logiciel 'Hub' en C++/Qt centralisant des modèles de recherche. Cette application communique en temps réel avec Rhino8 pour permettre la visualisation et l'analyse de données scientifiques directement dans un flux de travail 3D.",
     tags: ["C++", "Qt", "Rhino8", "Grasshopper", "Architecture Logicielle", "GitLab"],

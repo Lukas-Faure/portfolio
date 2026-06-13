@@ -33,7 +33,7 @@
 
 <div class="timeline-item {side}" class:visible>
   <div class="item-card glass-card">
-    <TerminalHeader title="{fileName} — {period}" />
+    <TerminalHeader title="{fileName} - {period}" />
     <div class="card-body">
       <h4 class="item-title font-display heading-gradient">{title}</h4>
       <div class="item-subtitle">{subtitle}</div>
